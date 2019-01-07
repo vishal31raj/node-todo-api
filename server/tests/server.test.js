@@ -10,6 +10,7 @@ const {todos, populateTodos, users, populateUsers} = require('./seed/seed');
 beforeEach(populateUsers);
 beforeEach(populateTodos);
 
+
 describe('POST /todos', () => {
   it('should create a new todo', (done) => {
     var text = 'Test todo text';
@@ -52,6 +53,7 @@ describe('POST /todos', () => {
   });
 });
 
+
 describe('GET /todos', () => {
   it('should get all todos', (done) => {
     request(app)
@@ -63,6 +65,7 @@ describe('GET /todos', () => {
       .end(done);
   });
 });
+
 
 describe('GET /todos/:id', () => {
   it('should return todo doc', (done) => {
@@ -91,6 +94,7 @@ describe('GET /todos/:id', () => {
       .end(done);
   });
 });
+
 
 describe('DELETE /todos/:id', () => {
   it('should remove a todo', (done) => {
@@ -130,6 +134,7 @@ describe('DELETE /todos/:id', () => {
       .end(done);
   });
 });
+
 
 describe('PATCH /todos/:id', () => {
   it('should update the todo', (done) => {
@@ -196,6 +201,7 @@ describe('GET /users/me', () => {
         .end(done);
     });
 });
+
 
 describe('POST /users', () => {
 
